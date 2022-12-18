@@ -28,8 +28,8 @@ public class StringVowels {
                     || character == 'a' || character=='u'|| character == 'e' || character=='o'|| character=='i') {
 
                 count ++;
-                i++;
-            } 
+                
+            } i++;
         }
         System.out.println("Number of vowels in your input is = " + count);
     }

@@ -22,7 +22,7 @@ public class ArrayOfNumRepeated {
                 HashMap<Integer,Integer> numoccurance= new HashMap<>(); 
                 
                 for (int i=0;i<arr.length;i++) 
-                {   // in the begining the map will not contain anaything so if the value does not contained 
+                {   // in the begining the map will not contain anaything if the value is not contained 
                     //then put it with number of occurance equal to 1 initially 
                     if (!numoccurance.containsKey(arr[i])) 
                     {
