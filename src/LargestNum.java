@@ -42,36 +42,36 @@ public class LargestNum {
 
     }
     public static int[] getFirSec (int [] numbers) {
-        int largestnumber = numbers[0];
-        int secondLast=numbers[0];
-        int thirdLast=numbers[0];
+        int firstLarge = numbers[0];
+        int secondLarge=numbers[0];
+        int thirdLarge=numbers[0];
 
-        for (int index1=1; index1 < numbers.length ; index1++) 
+        for (int indexx=1; indexx < numbers.length ; indexx++) 
         {
-            if (numbers[index1]>largestnumber) 
-                largestnumber= numbers[index1];
+            if (numbers[indexx]>firstLarge) 
+                firstLarge= numbers[indexx];
             
         }
 
-        for (int index2=0; index2 < numbers.length ; index2++) 
+        for (int indeex=0; indeex < numbers.length ; indeex++) 
         {
 
-            if (numbers[index2]>secondLast && numbers[index2]!=largestnumber) 
+            if (numbers[indeex]>secondLarge && numbers[indeex]!=firstLarge) 
 
-                secondLast = numbers[index2];
+                secondLarge = numbers[indeex];
 
         }
-        for (int index3=0; index3<numbers.length;index3++) 
+        for (int inddex=0; inddex<numbers.length;inddex++) 
         {
-            if (numbers[index3]>thirdLast && numbers[index3]!=largestnumber && numbers[index3]!=secondLast) 
+            if (numbers[inddex]>thirdLarge && numbers[inddex]!=firstLarge && numbers[inddex]!=secondLarge) 
 
-                thirdLast = numbers[index3];
+                thirdLarge = numbers[inddex];
 
         }
         int num [] = new int [3];
-        num[0]=secondLast;
-        num[1]=largestnumber;
-        num[2]=thirdLast;
+        num[0]=secondLarge;
+        num[1]=firstLarge;
+        num[2]=thirdLarge;
         return num;
     }
 }
