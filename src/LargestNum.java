@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 
 
@@ -14,9 +15,11 @@ public class LargestNum {
     /**
      * @param args
      */
+  
+
     public static void main(String[] args) {
 
-        int numbers[]  = new int []{50,12,8,10,1001,6,87,24};
+        int numbers[]  = new int []{7,90,100,50,450,900,40,2,4};
         // return an integer value 
         int a = getLarge(numbers); 
         System.out.println(" Largest number =  "+ a);
@@ -75,5 +78,3 @@ public class LargestNum {
         return num;
     }
 }
-
-
