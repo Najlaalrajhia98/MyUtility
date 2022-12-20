@@ -1,6 +1,8 @@
 
 import java.util.Arrays;
 
+import javax.print.attribute.Size2DSyntax;
+
 
 
 /**
@@ -11,13 +13,13 @@ import java.util.Arrays;
  * @author LAP-7
  *
  */
-public class SortClass {
+public class SelcectionSort {
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-       // first activity to swap elements 
+        // first activity to swap elements 
         int arr [] = { 4,3,2,1};
         System.out.println(Arrays.toString(arr));
         int a = arr [0];
@@ -57,5 +59,3 @@ public class SortClass {
 
     }
 }
-
-
