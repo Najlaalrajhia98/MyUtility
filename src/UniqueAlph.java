@@ -30,7 +30,7 @@ public class UniqueAlph {
        for (int i=0;i<arr.length;i++) 
        {   
            
-               num.put(arr[i], 1);
+               num.put(arr[i], null);
            
 
           
