@@ -17,22 +17,27 @@ public class ArrayUniqueValues {
     public static void main(String[] args) {
 
         char charelements[]= { 'c' , 'a' , 'c' , 't' , 'a' , 'r' , 'a' , 't' , 'z' };
+     char [] a  = uniqueChar(charelements);
 
-        for (int i=0;i<charelements.length;i++) 
+    }
+
+public static char [] uniqueChar(char[] charelements) {
+    for (int i=0;i<charelements.length;i++) 
+    {
+        Boolean elementsRepeating=false;
+
+        for(int j=i+1;j<charelements.length && elementsRepeating==false ;j++) 
         {
-            Boolean elementsRepeating=false;
+            if (charelements[i]==charelements[j])
+                elementsRepeating=true;
+        }
 
-            for(int j=i+1;j<charelements.length && elementsRepeating==false ;j++) 
-            {
-                if (charelements[i]==charelements[j])
-                    elementsRepeating=true;
-            }
+        if (!elementsRepeating) 
+        {
+            System.out.println(charelements[i]);
 
-            if (!elementsRepeating) 
-            {
-                System.out.println(charelements[i]);
-
-            }
         }
     }
+    return charelements;
+}
 }
