@@ -26,7 +26,7 @@ public class ExpoAndBase {
         int expo =scanner.nextInt();
    
         System.out.println("Result = "+  resultNum(expo, base));
-
+        
     } 
     
     public static int resultNum(int expo,int base) {
