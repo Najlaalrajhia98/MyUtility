@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -13,29 +14,37 @@ public class ExpoAndBase {
 
     /**2) Calculate power, given the base and exponent.
     INPUT:  {'base': 2, 'exponent': 3}
-    OUTPUT: {'result': 6}
+    OUTPUT: {'result': 8}
      * @param args
      */
     public static void main(String[] args) {
-
-        Scanner scanner =new Scanner(System.in);
-
-        System.out.println("Enter the base :");
-        int base = scanner.nextInt();
-        System.out.println("Enter the expo :");
-        int expo =scanner.nextInt();
-   
-        System.out.println("Result = "+  resultNum(expo, base));
         
+        int power=1;
+        HashMap<String, Integer> baseExpo = new HashMap<>();
+        Scanner scanner =new Scanner(System.in);
+        System.out.println(resultnum(baseExpo,power,scanner));
     } 
     
-    public static int resultNum(int expo,int base) {
-        int power=1;
 
+    public static HashMap<String, Integer> resultnum(HashMap<String, Integer> baseExpo,int power,Scanner scanner) {
+        
+        
+        System.out.println("Enter the base :");
+        int  base = scanner.nextInt();
+        baseExpo.put("base", base);
+        System.out.println("Enter the exponent :");
+        int expo =scanner.nextInt();
+        baseExpo.put("expononent", expo);
+        
+       
         for (int i=0; i<expo ; i++) {
             power=power*base;
         }
-        return power;
-
-    } 
+        baseExpo.put("Result", power);
+        
+        
+        return baseExpo;
+        
+    }
+    
 }
