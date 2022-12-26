@@ -54,8 +54,8 @@ Do 2, 3, 4, 5, 6 and 7 recursively
         String aString= "kill";
         int i=0;
         System.out.print(reverString(aString,i));
-       
-        // FOR DEACREMENT AND INCREAMENT 
+        // to make new line between the outputs
+        
         System.out.println();
         reverNum(i);
         
