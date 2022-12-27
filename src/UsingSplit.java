@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
  * 
  */
@@ -41,13 +43,18 @@ public class UsingSplit {
 
     }
     public static void reverseWord() {
-        
-        String input="Reverse, me, if, you, can";
+        Stack<String> myStack = new Stack<>();
+        String input=" Reverse, me, if, you, can";
         String result[] = input.split(",", 5);
         
         for (int i=0; i<result.length;i++) {
             System.out.print(result[i]);
+            myStack.add(result[i]);
+        } System.out.println();
+        while (!myStack.empty()) {
+            System.out.print(myStack.pop());
         }
+        
 
     } 
 }
