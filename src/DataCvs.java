@@ -26,7 +26,6 @@ public class DataCvs {
             File dataFile = new File("data/data.csv");
             if (dataFile.exists()) {
                 Scanner readFile = new Scanner(dataFile); 
-                String lineString;
                 
                 HashMap<String, String[]> store = new HashMap<>();
                 while(readFile.hasNextLine()) {
