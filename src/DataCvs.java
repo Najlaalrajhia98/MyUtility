@@ -24,19 +24,22 @@ public class DataCvs {
         try {
 
             File dataFile = new File("data/data.csv");
-            if (dataFile.exists()) {
+            if (dataFile.exists()) 
+            {
                 Scanner readFile = new Scanner(dataFile); 
-                
                 HashMap<String, String[]> store = new HashMap<>();
-                while(readFile.hasNextLine()) {
+                
+                while(readFile.hasNextLine()) 
+                {
                     String storee[] = readFile.nextLine().split(",");
-                    for (int i=0;i<storee.length;i++) {
+                    for (int i=0;i<storee.length;i++) 
+                    {
                         store.put(storee[0], storee);
 
                     }
                 }
-
-                for (String key : store.keySet()) {
+                for (String key : store.keySet()) 
+                {
                     System.out.println(Arrays.toString(store.get(key)));
                 }
 
