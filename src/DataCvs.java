@@ -1,6 +1,6 @@
-import java.awt.Stroke;
+
 import java.io.File;
-import java.lang.invoke.StringConcatFactory;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -19,7 +19,6 @@ public class DataCvs {
      * @param args
      */
     public static void main(String[] args) {
-
 
         try {
 
@@ -48,7 +47,7 @@ public class DataCvs {
             }
 
         }catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("file dosent exist");
         }
     }
 }

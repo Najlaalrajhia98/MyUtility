@@ -14,7 +14,19 @@ import java.util.Scanner;
 public class InputUserToFile {
 
     /**
-     * @param args
+     * Take input from user and store it in data.csv file as follows:
+
+INPUT: (Enter your name: ) Mr.A
+       (Enter your email: ) mr.a@gmail.com
+
+ACTION: After the input, the data.csv file should look like this:
+001, Mr.A, mr.a@gmail.com, true
+
+INPUT: (Enter your name: ) Mr.B
+       (Enter your email: ) mr.b@gmail.com
+ 
+ACTION: After the input, the data.csv file should look like this:
+002, Mr.B, mr.b@gmail.com, true
      */
     
     public static void main(String[] args) {
