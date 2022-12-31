@@ -34,7 +34,7 @@ OUTPUT: ["Mr A", "Mr B", "MR Y"]
         namesUnique(arrayofNames);
         uniNamess(arrayofNames);
         findMatch (names,names2);
-        System.out.println(hashsetUnique(names,names2));
+        System.out.println(hashsetCommon(names,names2));
     }
 
     // This method is used to return unique elements using HashSet
@@ -87,20 +87,20 @@ OUTPUT: ["Mr A", "Mr B", "MR Y"]
     // This method is used to get common uni elements using arraylsit and if statments
     public static void findMatch (String [] names,String [] names2) {
 
-        ArrayList<String> storeMatch=new ArrayList<>();
+        ArrayList<String> storeCommon=new ArrayList<>();
 
         for (int i=0;i<names.length;i++) {
             for (int j=0;j<names2.length;j++) {
                 if (names[i]==names2[j]) {
                     String store[] = {names[i]};
-                    storeMatch.add(store[0]);
+                    storeCommon.add(store[0]);
                 }
             }
         }
-        System.out.println(storeMatch);
+        System.out.println(storeCommon);
     }
     // This method is used to get the common uni elements using hashSets
-    public static HashSet<String> hashsetUnique(String [] names,String [] names2) {
+    public static HashSet<String> hashsetCommon(String [] names,String [] names2) {
 
         HashSet<String> set1= new HashSet<>();
         HashSet<String>  set2= new HashSet<>();
