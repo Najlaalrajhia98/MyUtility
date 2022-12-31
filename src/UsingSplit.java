@@ -24,11 +24,14 @@ public class UsingSplit {
      * 
      */
     public static void main(String[] args) {
-
+        char delimiter = ',';
+        String input="Reverse,me,if,you,can";
         int i=0;
         reverseWords(i);
         System.out.println();
-        reverseWord();
+        reverseWord(input);
+        System.out.println();
+        System.out.println(splitMethod(input,delimiter));
 
     }
     public static void reverseWords(int i) 
@@ -46,44 +49,44 @@ public class UsingSplit {
 
     }
 
-    public static void reverseWord() {
+    public static void reverseWord(String input) {
 
         Stack<String> myStack = new Stack<>();
-        String input=" Reverse, me, if, you, can";
+        
         String result[] = input.split(",", 5);
 
         for (int i=0; i<result.length;i++) 
         {
-            System.out.print(result[i]);
+            System.out.print(" "+result[i]);
             myStack.add(result[i]);
         } 
 
         System.out.println();
         while (!myStack.empty()) {
-            System.out.print(myStack.pop());
+            System.out.print(" "+myStack.pop());
         }
 
 
-    } public static void splitMethod() {
-        ArrayList<String> arrayList =new ArrayList<>();
-        String input="Reverse me if you can";
+    } // implementation of the split method without using .slpit()
+    public static ArrayList<String> splitMethod(String input,char delimiter) 
+    {
+        ArrayList<String> element= new ArrayList<>();
+        String subString= "";
         
-        for (int i=0; i<input.length();i++) {
-            if (input.charAt(i)==' ') {
-                String string1 = String.valueOf(input.charAt(i));
-                arrayList.add(string1);
-            String aString [] = new String [3];
-            aString[0]=aString2;
-                arrayList.add(aString[0]);
-                System.out.println(arrayList);
-                
+        for (int i=0; i<input.length();i++) 
+        {
+            if (input.charAt(i)== delimiter) 
+            {
+                element.add(subString);
+                subString=" ";
+            } else 
+            {
+                subString=subString+input.charAt(i);
                 
             }
-        }
+       
+        } element.add(subString);
+        
+        return element;
     }
 }
-            //for (String kString : arrayList) {
-               // System.out.print(kString);
-       
-
-
