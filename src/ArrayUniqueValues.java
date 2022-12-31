@@ -26,7 +26,7 @@ public static char [] uniqueChar(char[] charelements) {
     {
         Boolean elementsRepeating=false;
 
-        for(int j=i+1;j<charelements.length && elementsRepeating==false ;j++) 
+        for(int j=i+1;j<charelements.length ;j++) 
         {
             if (charelements[i]==charelements[j])
                 elementsRepeating=true;
